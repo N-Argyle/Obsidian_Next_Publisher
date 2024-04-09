@@ -1,15 +1,30 @@
-NextJS server to interop with Obsidian. Allows password protected hosting of individual Obsidian docs.
+# Obsidian Next Server
 
-Corresponding Obsidian plugin is at [Obsidian Next Publisher Plugin](https://github.com/N-Argyle/Obsidian_Next_Publisher_Plugin).
+This is a NextJS server that interoperates with Obsidian, allowing password-protected hosting of individual Obsidian documents.
 
-For deployment, I'd recommend Vercel. 
+## Corresponding Obsidian Plugin
 
-To run locally, clone the repo. Somewhere, create an empty Postgres database (I used Vercel postgres). Fill out the .env based on .env.example. 
+The corresponding Obsidian plugin is available at [Obsidian Next Publisher Plugin](https://github.com/N-Argyle/Obsidian_Next_Publisher_Plugin).
 
-API an Master Password you must come up with on your own, but they should match what you use in the Plugin. 
+## Deployment
 
-Run `yarn migrate` to set up your Postgres tables. 
+For deployment, it is recommended to use Vercel.
 
-Once migrations are done, you can move to the cloud provider of your choice. 
+## Local Development
 
-Run `yarn dev` to run the server in development mode if you feel like modifying some code. 
+To run the server locally, follow these steps:
+
+1. Clone the repository.
+2. Create an empty Postgres database (e.g., using Vercel Postgres or Neon).
+3. Copy the `.env.example` file to `.env` and fill in the required values:
+    - `API_KEY`: You must come up with your own API key.
+    - `MASTER_PASSWORD`: You must come up with your own master password.
+    - `POSTGRES_URL`: The connection string for your database.
+    - The API key and master password should match the ones used in the Obsidian Next Publisher Plugin.
+4. Run `yarn migrate` to set up the Postgres tables.
+5. Once the migrations are complete, you can deploy the server to the cloud provider of your choice.
+6. To run the server in development mode, use `yarn dev`.
+
+## Modifying the Code
+
+If you want to modify the code, you can run the server in development mode using `yarn dev`.
