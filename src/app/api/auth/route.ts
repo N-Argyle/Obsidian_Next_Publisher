@@ -34,7 +34,7 @@ export async function POST(req: Request) {
   return NextResponse.json({ sessionID: newHash }, { status: 200 });
 }
 
-export function decryptString(encryptedText: string, masterPassword: string) {
+function decryptString(encryptedText: string, masterPassword: string) {
 	const algorithm = "aes-256-cbc";
 	const key = crypto.scryptSync(masterPassword, "salt", 32);
 	const iv = Buffer.alloc(16, 0); // Initialization vector

@@ -4,7 +4,7 @@
 import { VercelPgDatabase } from "drizzle-orm/vercel-postgres";
 import React from "react";
 
-export default function Login({ id, db }: { id: string }) {
+export default function Login({ id }: { id: string }) {
   const [password, setPassword] = React.useState("");
   const [error, setError] = React.useState("");
   const handleSubmit = async () => {
