@@ -1,0 +1,1 @@
+ALTER TABLE "docs" DROP CONSTRAINT "docs_path_unique";
