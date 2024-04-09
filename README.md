@@ -28,3 +28,6 @@ To run the server locally, follow these steps:
 ## Modifying the Code
 
 If you want to modify the code, you can run the server in development mode using `yarn dev`.
+
+## Demo
+Go here [https://obsidian-next-publisher.vercel.app/docs/xFjyN4H5fI], use `test` as the password.
