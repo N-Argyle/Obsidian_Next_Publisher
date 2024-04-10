@@ -13,6 +13,8 @@ import { cookies } from "next/headers";
 import Login from "@/components/login";
 import Head from "next/head";
 import { Metadata } from 'next'
+import remarkGfm from 'remark-gfm'
+
 
 export default async function Page({ params }: { params: { id: string } }) {
   const db = drizzle(sql);
@@ -74,7 +76,7 @@ export default async function Page({ params }: { params: { id: string } }) {
             ))}
           </div>
           <Markdown
-            remarkPlugins={[remarkMath]}
+            remarkPlugins={[remarkMath, remarkGfm]}
             rehypePlugins={[rehypeKatex]}
             components={{
               code(props) {
