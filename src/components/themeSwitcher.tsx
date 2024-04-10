@@ -13,7 +13,7 @@ export default function ThemeSwitcher() {
     e.target.blur()
   };
   return (
-    <div className="w-full flex justify-end p-4">
+    <div className="w-full flex justify-start p-4">
     <div className="dropdown mr-4">
       <div tabIndex={0} role="button" className="btn m-1">
         Theme
