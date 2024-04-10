@@ -46,6 +46,16 @@ export default function ThemeSwitcher() {
             type="radio"
             name="theme-dropdown"
             className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+            aria-label="Business"
+            value="business"
+            onChange={handleChange}
+          />
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="theme-dropdown"
+            className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
             aria-label="Light"
             value="light"
             onChange={handleChange}
